@@ -4,15 +4,20 @@
       width: 100%;
       margin-top: 0px;
     ">
-    <div class="mask" style="background-color: rgba(230, 223, 223, 0.815);">
+    <div class="mask p-3" style="background-color: rgb(241 241 241);">
         <div class="container">
+             
+        <form  (ngSubmit)="onSubmit()">
+            <div class="m-3 d-flex flex-row">
+                <i class="fa fa-exclamation-triangle"></i>
+                <label class="text-danger ms-2"> All Questions are Required to Submit</label>
+            </div>
             
-        <form [formGroup]="form" (ngSubmit)="onSubmit()">
             <div class="container" *ngFor="let q of questions ; let i=index ">
                 <h4 for="Question" class="input-group" >
                     Q {{ i+1 }}: {{ q.question }}
                 </h4>
-                <div style="display: grid;text-align: left;grid-template-columns: repeat(2, 1fr);" class="mb-3">
+                <div style="display: grid;text-align: left;grid-template-columns: repeat(2, 1fr); padding-left: 2%;" class="mb-3 ">
                     <ul class="list-group" style="list-style: none;" >
                         <label class="lblAnswer">
                             <li class=""

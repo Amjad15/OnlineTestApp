@@ -4,6 +4,7 @@ import { ExamComponent } from './exam/exam.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { ResultComponent } from './result/result.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,8 +12,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'exam', component: ExamComponent},
-  //{ path: 'exam', component: ExamComponent, canActivate: [AuthGuard], data: { role: 'user'}},
-  //{ path: 'results', component: ResultsComponent, canActivate: [AuthGuard], data: { role: 'admin'}}
+  { path: 'result', component: ResultComponent},
 ];
 
 @NgModule({

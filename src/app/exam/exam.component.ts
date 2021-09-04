@@ -14,7 +14,6 @@ export class ExamComponent implements OnInit {
   index= 0 ;
   showN = true;
   showP = false;
-  form: FormGroup;
 
   fullName= localStorage.getItem("fullName");
   Email=  localStorage.getItem("email");
@@ -77,7 +76,7 @@ export class ExamComponent implements OnInit {
     }
   ];
 
-  constructor(private formBuilder: FormBuilder,private router: Router) {
+  constructor(private router: Router) {
     
     
    }

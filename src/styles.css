@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 footer{
-    color: black;
+    color: white;
     margin-top: 30%;
-    background-color:  #3f192f3b;
+    background-color:  #796fab;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -11,6 +11,9 @@ footer{
  }
  .btn-clr {
     color: #fff !important;
-    background-color: #3f192f !important;
-    border-color: #3f192f !important;
+    background-color: rgb(121, 111, 171) !important;
+    border-color: rgb(121, 111, 171) !important;
+}
+.mask {
+    background-color: rgba(222, 245, 236, 0.82);
 }
