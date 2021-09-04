@@ -17,3 +17,15 @@ footer{
 .mask {
     background-color: rgba(222, 245, 236, 0.82);
 }
+.numberCircle {
+    border-radius: 50%;
+    width: 1.9%;
+    height: 20px;
+    /* padding: 8px; */
+    background: #fff;
+    border: 2px solid #dc84b6;
+    color: #ca418e;
+    text-align: center;
+    font: 15px Arial, sans-serif;
+    margin: 0.3rem;
+}

@@ -7,16 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
-  score: number = 12 ;
+  score: number = parseInt(localStorage.getItem("result"));
   fullName= localStorage.getItem("fullName");
   Email=  localStorage.getItem("email");
   birthDate= new Date ( localStorage.getItem("birthDate")).getFullYear();
   currentYear = new Date().getFullYear();
   age = this.currentYear - (this.birthDate);
+  showen=false;
 
   constructor() { }
 
   ngOnInit(): void {
+
+    if (  parseInt(localStorage.getItem("result")) >= 70 ) this.showen = true;
   }
 
 }

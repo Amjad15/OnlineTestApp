@@ -7,5 +7,11 @@
     <h4 class="text-center fw-bold">Age : {{ score }} </h4>
     
     <hr>
-    <h4 class="text-center fw-bold"><i class="fa fa-info-circle m-2" style="color: #d94881;"></i>Your Result is : {{ score }}% </h4>
+    <div class="conatiner d-inline justify-content-center d-flex">
+        <h4 class="text-center fw-bold"><i class="fa fa-info-circle m-2" style="color: #d94881;"></i>Your Result is : {{ score }}% </h4>
+        <button class="btn btn-success d-inline m-2" *ngIf="showen">Pass</button>
+        <button class="btn btn-danger d-inline m-2" *ngIf="!showen">Failed</button>
+
+    </div>
+   
     </div>
