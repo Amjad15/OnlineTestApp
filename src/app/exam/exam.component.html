@@ -1,0 +1,43 @@
+<div class="p-5 text-center bg-image" style="
+    
+      height: 611px;
+      width: 100%;
+      margin-top: 0px;
+    ">
+    <div class="mask" style="background-color: rgba(230, 223, 223, 0.815);">
+        <div class="container">
+            
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="container" *ngFor="let q of questions ; let i=index ">
+                <h4 for="Question" class="input-group" >
+                    Q {{ i+1 }}: {{ q.question }}
+                </h4>
+                <div style="display: grid;text-align: left;grid-template-columns: repeat(2, 1fr);" class="mb-3">
+                    <ul class="list-group" style="list-style: none;" >
+                        <label class="lblAnswer">
+                            <li class=""
+                                style="background: transparent; " *ngFor="let a of answers;">
+                                <div *ngIf="a.questionNo == q.id ||  ( a.id != 1 && a.id != 2 && a.id != 3 && q.id != 1 && q.id != 2 ) ">
+                                    <input type="radio" name="option{{i}}" value= "a.id" >
+                                    {{ a.answer }}
+                                </div>
+                               
+                        
+                            </li>
+                        </label>
+                    </ul>
+                </div>
+        
+            </div>
+            
+        </form>
+        </div>
+        <div class="offset-sm-1 col-sm-10 mb-3">
+            
+            <button type="submit" class="btn btn-clr mb-3" id="next"><i
+                class="fa fa-share me-2"></i> SUBMIT</button>
+        </div>
+        
+    </div>
+</div>
+        

@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+footer{
+    color: black;
+    margin-top: 30%;
+    background-color:  #3f192f3b;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+ }
+ .btn-clr {
+    color: #fff !important;
+    background-color: #3f192f !important;
+    border-color: #3f192f !important;
+}
