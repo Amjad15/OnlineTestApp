@@ -10,14 +10,14 @@ import { Iuser } from '../interface/iuser';
 })
 export class RegisterComponent implements OnInit {
 
-  
-
+  showen=false;
   form: FormGroup;
   user : Iuser = {
     fullName:"",
     email:"",
-    birthDate:new Date
+    birthDate:null
   };
+  
   submitted: boolean;
   
   constructor(private formBuilder: FormBuilder,private router: Router) { 
@@ -34,10 +34,13 @@ export class RegisterComponent implements OnInit {
   }
   onSubmit(){ 
     this.submitted = true; 
+    
     // Validate Form Entires
-    if (this.form.invalid) {
+    if (this.form.invalid && (this.form.get('birthDate').value == null ||  this.form.get('birthDate').value == undefined ||  this.form.get('birthDate').value == "")) {
+      this.showen= !this.showen;
       return;
     }
+    this.showen= true;
     localStorage.setItem("fullName", this.form.get('fullName').value);
     localStorage.setItem("email", this.form.get('email').value);
     localStorage.setItem("birthDate", this.form.get('birthDate').value);
